@@ -7,7 +7,7 @@ export default function AboutSection() {
         
         <div className='max-w-4xl mx-auto max-md:px-8 '>
           <h1 className='text-7xl max-md:text-5xl mb-8 font-semibold'>About Me</h1>
-          <p className='text-4xl max-md:text-3xl mb-8'>I'm a website developer focus on front-end development, I'm currently learning and styling a lot of things to become a Fullstack Developer</p>
+          <p className='text-4xl max-md:text-3xl mb-8'>I&apos;m a website developer focus on front-end development, I&apos;m currently learning and styling a lot of things to become a Fullstack Developer</p>
           <p className='text-4xl max-md:text-3xl'>❝Still learning, still styling, still surviving..❞</p>
         </div>
         <div className='flex w-full h-full max-h-60'>

@@ -2,6 +2,7 @@
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { FiMail, FiFolder, FiLinkedin } from 'react-icons/fi'
 
@@ -51,13 +52,14 @@ export default function HeroSection({ onOutOfViewChange }: HeroSectionProps) {
         className={`h-screen flex flex-col items-center justify-center p-6 ease-in-out`}
       >
         {/* Foto profil */}
-        <img
-        data-aos="fade-down"
-        ref={targetRef}
-          src="/profile.png"
-          alt="Marsel"
-          className={`border-4 rounded-full object-cover mb-6 w-80 h-80 transition-opacity duration-500 ease-in-out`}
-          loading="lazy"
+        <Image
+          ref={targetRef}
+          data-aos="fade-down"
+          src={"/profile.png"}
+          alt="my profile"
+          className={`border-4 rounded-full object-cover mb-6 min-w-60 min-h-60 max-w-80 max-h-80 transition-opacity duration-500 ease-in-out`}
+          width={1000}
+          height={1000}
         />
 
         {/* Nama + deskripsi */}

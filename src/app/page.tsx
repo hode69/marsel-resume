@@ -6,7 +6,6 @@ import ContactSection from "@/components/sections/ContactSection"
 import Footer from "@/components/sections/Footer"
 import HeroSection from "@/components/sections/HeroSection"
 import PortfolioSection from "@/components/sections/PortfolioSection"
-import { Contact } from "lucide-react"
 import { useState } from "react"
 
 export default function HomePage() {

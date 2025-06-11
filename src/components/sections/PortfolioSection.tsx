@@ -2,14 +2,16 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
 import { HiGlobeAsiaAustralia } from 'react-icons/hi2'
 import { portfolioItems } from '../Portfolios/Items'
+import Image from 'next/image'
 
-function debounce(func: (...args: any[]) => void, wait: number) {
+function debounce<T extends unknown[]>(func: (...args: T) => void, wait: number) {
   let timeout: NodeJS.Timeout
-  return (...args: any[]) => {
+  return (...args: T) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
 }
+
 
 export default function PortfolioSection() {
     const [activeItem, setActiveItem] = useState<number | null>(null)
@@ -99,8 +101,8 @@ export default function PortfolioSection() {
                         <div className='relative space-y-8'>
                             {/* images */}
                             {item.images?.map((image, imageIndex) => (
-                                <div key={imageIndex} className='max-w-11/12 aspect-video rounded-lg overflow-hidden border-2 border-white/30 mx-auto items-center justify-center flex'>
-                                    <img src={image} alt="" className='object-cover w-full' />    
+                                <div key={imageIndex} className='max-w-11/12 relative aspect-video rounded-lg overflow-hidden border-2 border-white/30 mx-auto items-center justify-center flex'>
+                                    <Image src={image} alt="" fill className='object-cover w-full' />
                                 </div>
                             ))}
 
